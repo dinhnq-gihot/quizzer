@@ -1,7 +1,4 @@
 [workspace]
 resolver = "2"
 
-members = [
-    "bin/*",
-    "lib/*",
-]
+members = ["bin/*", "lib/*"]
