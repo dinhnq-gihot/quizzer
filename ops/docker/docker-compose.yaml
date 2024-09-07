@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: quizzer
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: quizzer
+    ports:
+      - "15432:5432"
+    volumes:
+      - ./lib/quizzer.db:/var/lib/postgresql/data
+    deploy:
+      resources:
+        limits:
+          cpus: '0.1' # Limit to 0.5 CPU cores
+          memory: '512M' # Limit to 512MB of RAM
